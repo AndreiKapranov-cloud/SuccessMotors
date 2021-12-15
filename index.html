@@ -1,0 +1,245 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "")
+  {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());
+  document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+<head>
+    
+  <meta charset="ISO-8859-1">
+  <title>Create New Order</title>
+ 
+  <style>  body, html {
+      height: 100%;
+  }
+
+  /* The hero image */
+  .hero-image {
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s1.1zoom.ru/big0/629/Sunrises_and_sunsets_Trucks_Retro_Grass_Old_Side_605279_1280x844.jpg");
+
+      /* Set a specific height */
+      height: 50%;
+
+      /* Position and center the image to scale nicely on all screens */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+  }
+
+  /* Place text in the middle of the image */
+  .hero-text {
+      text-align: right;
+      position: absolute;
+      top: 50%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      color: white;
+  }
+
+  A {
+      text-decoration: none;
+  }
+
+  a {
+      font-size: 70%;
+  }
+
+  td {
+      font-size: 10px;
+  }
+
+  button {
+      border-radius: 4px;
+      background-color: #555050;
+      border: none;
+      color: #fff;
+      text-align: center;
+      font-size: 9px;
+      padding: 16px;
+      width: 170px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 1px;
+      box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+  }
+
+  button {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+  }
+
+  button:after {
+      content: '>>';
+      position: absolute;
+      opacity: 0;
+      top: 14px;
+      right: -20px;
+      transition: 0.5s;
+  }
+
+  button:hover {
+      padding-right: 24px;
+      padding-left: 8px;
+  }
+
+  button:hover:after {
+      opacity: 1;
+      right: 10px;
+  }
+
+  h1 {
+      font-size: 10px;
+  }
+
+
+  label {
+      float: left;
+      padding-right: 10px;
+  }
+
+  .field {
+
+      clear: both;
+      text-align: right;
+  }
+
+  .main {
+      float: left
+  }
+  </style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+      
+      <p><a style="color:rgba(247,249,250,0.86);">SUCCESS MOTORS</a></p>
+  </div>
+</div>
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form name="myForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"   method="POST">
+  <input type=hidden name='captcha_settings' value='{"keyname":"windofchange","fallback":"true","orgId":"00D5j000001tktG","ts":""}'>
+  
+  
+<input type=hidden name="oid" value="00D5j000001tktG">
+<input type=hidden name="retURL" value="http://google.com">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="akapranov872@gmail.com">                                         -->
+<!--  ----------------------------------------------------------------------  -->
+<div class="main">
+  <div class="field">
+    <h1><label> </label></h1>
+</div>
+<div class="field">
+  <h1>Company Name<input id="company" maxlength="40" name="company" size="20" type="text" required><br></h1>
+</div>
+<div class="field">
+  <h1><label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" required></h1>
+</div>
+<div class="field">
+  <h1><label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" required><br></h1>
+</div>
+<div class="field">
+  <h1><label for="email">E-mail</label><input id="email" maxlength="80" name="email" size="20" type="text" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    title="Invalid email!"><br></h1>
+</div>  
+<div class="field">
+  <h1><label for="phone">Phone</label><input id="phone" maxlength="80" name="last_name" size="20" type="text" required><br></h1>
+</div>
+
+
+
+
+<div class="field">
+  <h1><label for="00N5j000006PDUQ">Product</label>
+
+
+
+<select id="00N5j000006PDUQ" maxlength="40" name="00N5j000006PDUQ" size="20" type="text"><br></h1> <!--Supplement an id here instead of using 'name'-->
+
+
+
+
+
+<option value="R001C1" selected>Renault Logan</option>
+<option value="R002C2">Renault Logan Stepway</option>
+<option value="R003C3">Renault Sandero</option>
+<option value="R004C4">Renault Sandero Stepway</option>
+<option value="R005E1">K7M</option>
+
+<option value="R006E2">K4M</option>
+<option value="R007E3" >H4M</option>  
+<option value="HK001C1">Kia Rio</option>
+<option value="HK002C2">Kia Rio X-Line</option>
+<option value="HK003C3">Hyundai Accent</option>
+
+<option value="HK004C4">Hyundai Solaris</option>
+<option value="HK005E1">G4LC</option>
+<option value="HK006E2" >G4FG</option>
+<option value="VAG001C1">Volkswagen Polo Sedan</option>
+<option value="VAG002C2" >Volkswagen Polo 2021</option>  
+
+<option value="VAG003C3">Skoda Rapid</option>
+<option value="VAG004E1">CZCA</option>
+<option value="VAG005E2">CFW</option>
+<option value="VAG006E3">CWVA</option>
+<option value="VAG007E4">CFNA</option>
+
+<option value="VAG008E5">CFNB</option>
+<option value="L001C1" >Lada Vesta</option>
+<option value="L002C2">Lada Xray</option>
+<option value="L003E1">VAZ-21179</option>
+<option value="L004E2" >VAZ-21129</option>
+
+<option value="R008A1">Carpets Renault</option>
+<option value="HK007A1">Carpets Hyundai</option>
+<option value="HK008A2" >Carpets Kia</option>
+<option value="VAG009A1">Carpets Volkswagen</option>
+<option value="VAG010A2">Carpets Skoda</option>
+
+<option value="L005A1" >Carpets Lada</option>
+<option value="MI001A1">Phone holder Xiaomi</option>
+
+
+</select>
+
+</h1>
+</div>
+</div>
+
+<div class="field">
+<h1><label> </label></h1>
+</div>
+<div class="g-recaptcha" data-sitekey="6LdwIpkdAAAAAI1OTfCAE-mciAycrRHyAS1f3U89"></div><br>
+<div class="field">
+  <h1><label> </label></h1>
+  </div>
+<div class="text-center p-3">
+  <button type="submit">send</button>
+</div>
+
+</form>
+<footer><a>
+  Copyright Andrei Kapranov</a>
+</footer>
+</body>
